@@ -16,8 +16,6 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -33,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/loifloro/news-homepage)
+- Live Site URL: [Netlify](https://news-homepage-vue.netlify.app/)
 
 ## My process
 
@@ -104,6 +102,12 @@ To put multiple articles in Article components, I utilized the v-for feature of 
     <p class="article__desc">{{ article.description }}</p>
   </div>
 </div>
+```
+
+When deploying the project to Netlify, I've encountered build fail not knowing that the deploy settings on Netlify should have an environment variable
+
+```js
+NODE_VERSION=18.13.0
 ```
 
 ### Continued development
