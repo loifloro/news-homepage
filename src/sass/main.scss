@@ -1,0 +1,37 @@
+@import "./variable.scss";
+@import "./font.scss";
+@import "./components/main.scss";
+
+body {
+  font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+  padding: 1rem;
+  background: $off-white;
+
+  display: grid;
+  justify-content: center;
+
+  @media (min-width: 75rem) {
+    padding-inline: 5rem;
+    padding-block: 2rem;
+  }
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.8;
+  color: $dark-gray-blue;
+}
+
+main {
+  @media (min-width: 45rem) {
+    display: grid;
+    grid-template-areas:
+      "hero new"
+      "article article";
+    grid-template-columns: 1fr 20.5rem;
+    -moz-column-gap: 1.5rem;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+  }
+}

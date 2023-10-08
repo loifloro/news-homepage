@@ -1,0 +1,35 @@
+.new {
+  background: $dark-blue;
+  padding: 1.2rem 1rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+
+  @media (min-width: 45rem) {
+    grid-area: new;
+  }
+
+  &__title {
+    color: $soft-orange;
+    font-size: 2rem;
+    margin-top: 0px;
+  }
+
+  &__item {
+    &:not(&:last-child) {
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $dark-gray-blue;
+    }
+
+    &__title {
+      color: $off-white;
+      font-size: 1.2rem;
+      transition: all 400ms ease-in-out;
+
+      &:hover {
+        color: $soft-orange;
+        cursor: pointer;
+      }
+    }
+  }
+}

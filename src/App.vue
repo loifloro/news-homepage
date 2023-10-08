@@ -1,26 +1,48 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header />
+
+  <main>
+    <div class="hero">
+      <img
+        class="hero__img"
+        srcset="
+          ./assets/images/image-web-3-desktop.jpg 1600w,
+          ./assets/images/image-web-3-mobile.jpg   720w
+        "
+        src="./assets/images/image-web-3-mobile.jpg"
+        alt="Web 3"
+      />
+
+      <div class="hero__content">
+        <h1 class="hero__title">The Bright Future of Web 3.0?</h1>
+        <div>
+          <p class="hero__desc">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <button class="hero__btn">Read more</button>
+        </div>
+      </div>
+    </div>
+    <New />
+    <Article />
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+import New from "./components/New.vue";
+import Article from "./components/Articles.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    New,
+    Article,
+    Footer,
+  },
+};
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

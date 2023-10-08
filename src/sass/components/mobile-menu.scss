@@ -1,0 +1,60 @@
+.mobile-menu {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(-90deg, $off-white 70%, rgba(8, 8, 8, 0.516) 30%);
+  background-size: cover;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  @media (min-width: 45rem) {
+    display: none;
+  }
+
+  &__close-btn {
+    display: block;
+    justify-content: flex-end;
+    margin-left: auto;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  &__open-btn {
+    height: 1.5rem;
+    width: 3rem;
+    @media (min-width: 45rem) {
+      display: none;
+    }
+  }
+
+  &__list {
+    margin: unset;
+    padding-left: calc(30% + 1rem);
+    list-style: none;
+    margin-top: 40%;
+
+    &__item {
+      font-size: 1.1rem;
+      color: $dark-blue;
+      margin-block: 1.5rem;
+      transition: all 400ms ease-in-out;
+
+      &:hover {
+        color: $soft-orange;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

@@ -1,0 +1,39 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  &__list {
+    all: unset;
+    list-style: none;
+  }
+
+  &__logo {
+    width: auto;
+    height: 2rem;
+  }
+
+  &__nav {
+    display: none;
+
+    @media (min-width: 45rem) {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
+
+    &__item {
+      color: $dark-gray-blue;
+      transition: all 400ms ease-in-out;
+
+      &:hover {
+        color: $soft-red;
+        cursor: pointer;
+      }
+    }
+  }
+}
